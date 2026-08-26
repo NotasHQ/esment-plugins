@@ -1,5 +1,6 @@
 {
   "name": "esment",
+  "description": "Esment memory — persistent, cross-assistant context. One package, two flavors: local (stdio, your machine) and cloud (https://mcp.esment.notas.ai/mcp).",
   "owner": {
     "name": "Esment",
     "url": "https://esment.notas.ai"

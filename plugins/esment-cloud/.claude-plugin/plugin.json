@@ -1,0 +1,15 @@
+{
+  "name": "esment",
+  "version": "1.0.0-rc.1",
+  "description": "Esment memory — persistent, cross-assistant context.",
+  "author": {
+    "name": "Esment",
+    "url": "https://esment.notas.ai"
+  },
+  "mcpServers": {
+    "esment": {
+      "type": "http",
+      "url": "https://mcp.esment.notas.ai/mcp"
+    }
+  }
+}

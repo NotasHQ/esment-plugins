@@ -10,8 +10,8 @@ esment-plugins/
 ├── .claude-plugin/
 │   └── marketplace.json   # Claude marketplace index (git source)
 ├── plugins/
-│   ├── esment/            # LOCAL flavor — stdio MCP, hooks, skills (desktop)
-│   └── esment-cloud/      # CLOUD flavor — remote MCP URL + OAuth (web)
+│   ├── esment/            # LOCAL flavor — stdio MCP, hooks, skills, Claude manifest
+│   └── esment-cloud/      # CLOUD flavor — remote MCP URL + OAuth, Claude manifest
 └── README.md
 ```
 
@@ -39,15 +39,38 @@ config files.
 
 ### Claude Code / Claude Desktop (git marketplace)
 
+The repo ships the Claude layout (`.claude-plugin/plugin.json` in both
+flavors) and validates with `claude plugin validate` — installing is two
+commands:
+
 ```bash
 claude plugin marketplace add https://github.com/xm1000z/esment-plugins
 claude plugin install esment@esment
 ```
 
 Claude Desktop: **Plugins → Add marketplace → repository URL**
-(`https://github.com/xm1000z/esment-plugins`) → install. The Desktop's MCP
-connector is set up by the Esment app card (it writes
-`claude_desktop_config.json`); the plugin adds skills.
+(`https://github.com/xm1000z/esment-plugins`) → install.
+
+> The marketplace points at the **local** flavor, whose MCP runs the
+> `esment-mcp` binary of the machine that exported the package. For your own
+> install, let the Esment app card do it (it regenerates the package with
+> **your** paths and writes the Desktop's `claude_desktop_config.json`). For a
+> plug-and-play install that works for anyone, use the **cloud** flavor
+> instead — see "Manual upload" below.
+
+### Claude Desktop — manual upload (custom plugin zip)
+
+Everywhere else (web downloads, other users' machines) the cloud flavor is the
+portable one: point Claude at a zip whose root is `.claude-plugin/` and it
+connects to `https://mcp.esment.notas.ai/mcp` (OAuth). Built from
+`plugins/esment-cloud`:
+
+```bash
+cd plugins/esment-cloud && zip -r ../esment-plugin-cloud.zip .claude-plugin plugin.json mcp.json skills
+```
+
+Then Claude Desktop → **Plugins → Upload plugin** (or the browser-equivalent
+"custom plugin" import) and pick the zip.
 
 ### ChatGPT / Codex desktop
 
@@ -78,4 +101,6 @@ developer mode): register the MCP connection in `chatgpt.com/plugins` (URL
   exported it (the app binary + your config). The Esment app regenerates the
   package with **your** paths on every Connect; for manual installs, adjust
   the two lines.
+- Both flavors ship `.claude-plugin/plugin.json` with the MCP server inline
+  (camelCase `mcpServers`) — the shape `claude plugin validate` accepts.
 - License: MIT. Icon: the Esment brand icon.

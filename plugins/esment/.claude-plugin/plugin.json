@@ -1,0 +1,18 @@
+{
+  "name": "esment",
+  "version": "1.0.0-rc.1",
+  "description": "Esment memory — persistent, cross-assistant context.",
+  "author": {
+    "name": "Esment",
+    "url": "https://esment.notas.ai"
+  },
+  "mcpServers": {
+    "esment": {
+      "command": "/Applications/Esment.app/Contents/MacOS/esment-mcp",
+      "args": [
+        "--config",
+        "/Users/marcfurriols/.esment/config.toml"
+      ]
+    }
+  }
+}
