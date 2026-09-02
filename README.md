@@ -44,12 +44,12 @@ flavors) and validates with `claude plugin validate` — installing is two
 commands:
 
 ```bash
-claude plugin marketplace add https://github.com/xm1000z/esment-plugins
+claude plugin marketplace add https://github.com/NotasHQ/esment-plugins
 claude plugin install esment@esment
 ```
 
 Claude Desktop: **Plugins → Add marketplace → repository URL**
-(`https://github.com/xm1000z/esment-plugins`) → install.
+(`https://github.com/NotasHQ/esment-plugins`) → install.
 
 > The marketplace points at the **local** flavor, whose MCP runs the
 > `esment-mcp` binary of the machine that exported the package. For your own
