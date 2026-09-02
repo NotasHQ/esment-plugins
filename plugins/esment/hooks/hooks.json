@@ -1,0 +1,48 @@
+{
+  "hooks": {
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "command": "/Applications/Esment.app/Contents/MacOS/esment-cli hook pre-compact --client codex --config /Users/marcfurriols/.esment/config.toml",
+            "timeout": 5,
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "command": "/Applications/Esment.app/Contents/MacOS/esment-cli hook session-start --client codex --config /Users/marcfurriols/.esment/config.toml",
+            "timeout": 10,
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "command": "/Applications/Esment.app/Contents/MacOS/esment-cli hook stop --client codex --config /Users/marcfurriols/.esment/config.toml",
+            "timeout": 5,
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "command": "/Applications/Esment.app/Contents/MacOS/esment-cli hook user-prompt-submit --client codex --config /Users/marcfurriols/.esment/config.toml",
+            "timeout": 5,
+            "type": "command"
+          }
+        ]
+      }
+    ]
+  }
+}

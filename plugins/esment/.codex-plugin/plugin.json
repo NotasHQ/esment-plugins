@@ -1,0 +1,31 @@
+{
+  "name": "esment",
+  "version": "1.0.0-rc.1",
+  "description": "Esment memory for your AI assistant — recall before you answer, save what matters.",
+  "author": {
+    "name": "NotasAI",
+    "url": "https://esment.notas.ai"
+  },
+  "homepage": "https://esment.notas.ai",
+  "license": "MIT",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Esment",
+    "shortDescription": "Your memory, across every assistant",
+    "longDescription": "Esment keeps a personal, inspectable memory store and recalls it before you answer — recall, save, and manage what matters across ChatGPT, Codex, Cursor and more.",
+    "developerName": "NotasAI",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "What do you know about me?",
+      "Remember that I prefer to work in phases with commits"
+    ],
+    "brandColor": "#0F172A",
+    "logo": "./assets/icon.png",
+    "composerIcon": "./assets/icon.png"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "Esment": {
+      "args": [
+        "--config",
+        "/Users/marcfurriols/.esment/config.toml"
+      ],
+      "command": "/Applications/Esment.app/Contents/MacOS/esment-mcp",
+      "cwd": "."
+    }
+  }
+}

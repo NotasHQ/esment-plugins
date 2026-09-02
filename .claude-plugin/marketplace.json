@@ -1,0 +1,14 @@
+{
+  "name": "esment",
+  "owner": {
+    "name": "Esment",
+    "url": "https://esment.notas.ai"
+  },
+  "plugins": [
+    {
+      "name": "esment",
+      "source": "./plugins/esment",
+      "description": "Esment memory — persistent, cross-assistant context."
+    }
+  ]
+}
