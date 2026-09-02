@@ -9,7 +9,12 @@
     {
       "name": "esment",
       "source": "./plugins/esment",
-      "description": "Esment memory — persistent, cross-assistant context."
-    }
+      "description": "Esment memory \u2014 persistent, cross-assistant context."
+      },
+      {
+      "name": "esment-cloud",
+      "source": "./plugins/esment-cloud",
+      "description": "Esment memory \u2014 cloud flavor (https://mcp.esment.notas.ai/mcp)."
+      }
   ]
 }
