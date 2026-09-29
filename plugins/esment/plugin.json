@@ -5,9 +5,9 @@
   "description": "Esment memory for your AI assistant — recall before you answer, save what matters.",
   "author": {
     "name": "NotasAI",
-    "url": "https://esment.notas.ai"
+    "url": "https://esment.notas.ai/?utm_source=esment_plugin&utm_medium=plugin_manifest"
   },
-  "homepage": "https://esment.notas.ai",
+  "homepage": "https://esment.notas.ai/?utm_source=esment_plugin&utm_medium=plugin_manifest",
   "repository": "https://github.com/NotasHQ/esment-plugins",
   "license": "MIT",
   "keywords": [

@@ -4,7 +4,7 @@
   "description": "Esment memory — persistent, cross-assistant context.",
   "author": {
     "name": "Esment",
-    "url": "https://esment.notas.ai"
+    "url": "https://esment.notas.ai/?utm_source=claude_plugin&utm_medium=plugin_manifest"
   },
   "mcpServers": {
     "esment": {
