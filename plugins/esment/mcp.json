@@ -4,10 +4,6 @@
     "Esment": {
       "type": "stdio",
       "command": "/Applications/Esment.app/Contents/MacOS/esment-mcp",
-      "args": [
-        "--config",
-        "/Users/marcfurriols/.esment/config.toml"
-      ],
       "cwd": "${PLUGIN_ROOT}"
     }
   }
