@@ -24,9 +24,11 @@ esment-plugins/
 | Used by | ChatGPT/Codex desktop, Claude Code, Claude Desktop, Cursor | ChatGPT web, Perplexity, any URL-based client |
 | Hooks (deterministic injection) | bundled | — |
 
-The flavor is chosen at **install time**: the Esment app's Connections card
-exports/installs the local flavor with your machine's exact paths. The cloud
-flavor is for assistants that cannot run a local process (web).
+The flavor is chosen at **install time**. The local flavor carries no
+per-user path: `esment-mcp` and `esment-cli hook …` find your config on their
+own (`$ESMENT_CONFIG`, else `~/.esment/config.toml`), so the same package works
+for anyone who has the Esment app in `/Applications`. The cloud flavor is for
+assistants that cannot run a local process (web).
 
 ## Install
 
@@ -51,12 +53,13 @@ claude plugin install esment@esment
 Claude Desktop: **Plugins → Add marketplace → repository URL**
 (`https://github.com/NotasHQ/esment-plugins`) → install.
 
-> The marketplace points at the **local** flavor, whose MCP runs the
-> `esment-mcp` binary of the machine that exported the package. For your own
-> install, let the Esment app card do it (it regenerates the package with
-> **your** paths and writes the Desktop's `claude_desktop_config.json`). For a
-> plug-and-play install that works for anyone, use the **cloud** flavor
-> instead — see "Manual upload" below.
+> The marketplace points at the **local** flavor: it runs
+> `/Applications/Esment.app/Contents/MacOS/esment-mcp` and reads **your**
+> `~/.esment/config.toml`, so the Esment app must be installed (and opened
+> once, which creates that config). Config somewhere else? Export
+> `ESMENT_CONFIG=/path/to/config.toml` in the environment the assistant starts
+> from. No app on the machine? Use the **cloud** flavor — see "Manual upload"
+> below.
 
 ### Claude Desktop — manual upload (custom plugin zip)
 
@@ -97,10 +100,12 @@ developer mode): register the MCP connection in `chatgpt.com/plugins` (URL
 
 ## Notes
 
-- The local flavor's `.mcp.json` embeds the machine paths of the machine that
-  exported it (the app binary + your config). The Esment app regenerates the
-  package with **your** paths on every Connect; for manual installs, adjust
-  the two lines.
+- The local flavor embeds only the app binary path
+  (`/Applications/Esment.app/...`), never a config path: the binaries resolve
+  `$ESMENT_CONFIG` → `~/.esment/config.toml` themselves, and never a
+  `config.toml` in the assistant's working directory (that one belongs to your
+  project). Regenerate with `esment plugin export --variant local` — without
+  `--config`, which would bake that path back in.
 - Both flavors ship `.claude-plugin/plugin.json` with the MCP server inline
   (camelCase `mcpServers`) — the shape `claude plugin validate` accepts.
 - License: MIT. Icon: the Esment brand icon.
