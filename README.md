@@ -47,13 +47,14 @@ commands:
 
 ```bash
 claude plugin marketplace add https://github.com/NotasHQ/esment-plugins
-claude plugin install esment@esment
+claude plugin install esment@esment        # cloud (OAuth)
+claude plugin install esment-local@esment  # local (needs the Esment app)
 ```
 
 Claude Desktop: **Plugins → Add marketplace → repository URL**
 (`https://github.com/NotasHQ/esment-plugins`) → install.
 
-> The marketplace points at the **local** flavor: it runs
+> `esment-local` is the **local** flavor: it runs
 > `/Applications/Esment.app/Contents/MacOS/esment-mcp` and reads **your**
 > `~/.esment/config.toml`, so the Esment app must be installed (and opened
 > once, which creates that config). Config somewhere else? Export
@@ -109,3 +110,12 @@ developer mode): register the MCP connection in `chatgpt.com/plugins` (URL
 - Both flavors ship `.claude-plugin/plugin.json` with the MCP server inline
   (camelCase `mcpServers`) — the shape `claude plugin validate` accepts.
 - License: MIT. Icon: the Esment brand icon.
+
+## Claude directory
+
+The directory takes **one plugin folder per submission**, and the remote MCP
+server goes in as its **own MCP connector** submission. Submit
+`plugins/esment-cloud` (plugin name `esment`) as the plugin bundle and
+`https://mcp.esment.notas.ai/mcp` as the connector, then pair them in the
+developer portal. The local flavor is not submitted: it runs a binary outside
+its plugin folder, which the directory does not accept.

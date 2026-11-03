@@ -1,20 +1,20 @@
 {
   "name": "esment",
-  "description": "Esment memory — persistent, cross-assistant context. One package, two flavors: local (stdio, your machine) and cloud (https://mcp.esment.notas.ai/mcp).",
+  "description": "Esment memory — persistent, cross-assistant context. Cloud flavor (remote MCP + OAuth) and local flavor (stdio, needs the Esment macOS app).",
   "owner": {
-    "name": "Esment",
+    "name": "NotasAI",
     "url": "https://esment.notas.ai/?utm_source=claude_plugin&utm_medium=plugin_manifest"
   },
   "plugins": [
     {
       "name": "esment",
-      "source": "./plugins/esment",
-      "description": "Esment memory \u2014 persistent, cross-assistant context."
-      },
-      {
-      "name": "esment-cloud",
       "source": "./plugins/esment-cloud",
-      "description": "Esment memory \u2014 cloud flavor (https://mcp.esment.notas.ai/mcp)."
-      }
+      "description": "Esment memory — cloud (https://mcp.esment.notas.ai/mcp, OAuth). Works anywhere."
+    },
+    {
+      "name": "esment-local",
+      "source": "./plugins/esment",
+      "description": "Esment memory — local (stdio, requires /Applications/Esment.app)."
+    }
   ]
 }

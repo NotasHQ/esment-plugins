@@ -1,5 +1,5 @@
 {
-  "name": "esment",
+  "name": "esment-local",
   "version": "1.0.0-rc.1",
   "description": "Esment memory — persistent, cross-assistant context.",
   "author": {
@@ -10,5 +10,6 @@
     "esment": {
       "command": "/Applications/Esment.app/Contents/MacOS/esment-mcp"
     }
-  }
+  },
+  "license": "MIT"
 }

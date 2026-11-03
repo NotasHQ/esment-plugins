@@ -1,11 +1,16 @@
 {
   "name": "esment",
-  "version": "1.0.0-rc.1",
-  "description": "Esment memory — persistent, cross-assistant context.",
+  "displayName": "Esment",
+  "version": "1.0.0",
+  "description": "Esment memory — persistent, cross-assistant context. Recall what matters before Claude answers and save what you share, in the memory you own.",
   "author": {
-    "name": "Esment",
+    "name": "NotasAI",
     "url": "https://esment.notas.ai/?utm_source=claude_plugin&utm_medium=plugin_manifest"
   },
+  "homepage": "https://esment.notas.ai/?utm_source=claude_plugin&utm_medium=plugin_manifest",
+  "repository": "https://github.com/NotasHQ/esment-plugins",
+  "license": "MIT",
+  "keywords": ["memory", "context", "recall", "personal-knowledge"],
   "mcpServers": {
     "esment": {
       "type": "http",
