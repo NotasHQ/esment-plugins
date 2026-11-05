@@ -21,8 +21,7 @@ you can review, edit or delete it from Esment at any time.
 The plugin runs no local code, hooks or scripts. Claude calls the Esment MCP
 server over HTTPS only when a tool is used: search queries go to the server to
 find matching memories, and facts you choose to share are stored in your Esment
-account. Nothing is sent to any other destination. See the privacy policy at
-https://esment.notas.ai/privacy.
+account. Nothing is sent to any other destination. See the [privacy policy](https://esment.notas.ai/privacy).
 
 ## Requirements
 
