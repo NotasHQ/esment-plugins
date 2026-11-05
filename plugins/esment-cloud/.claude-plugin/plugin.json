@@ -9,6 +9,9 @@
   },
   "homepage": "https://esment.notas.ai/?utm_source=claude_plugin&utm_medium=plugin_manifest",
   "privacyPolicyUrl": "https://esment.notas.ai/privacy",
+  "termsOfServiceUrl": "https://esment.notas.ai/terms",
+  "supportUrl": "https://esment.notas.ai/support",
+  "documentationUrl": "https://esment.notas.ai/docs/assistants",
   "repository": "https://github.com/NotasHQ/esment-plugins",
   "license": "MIT",
   "keywords": [
