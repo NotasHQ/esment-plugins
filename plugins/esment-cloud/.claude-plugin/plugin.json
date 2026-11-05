@@ -8,9 +8,15 @@
     "url": "https://esment.notas.ai/?utm_source=claude_plugin&utm_medium=plugin_manifest"
   },
   "homepage": "https://esment.notas.ai/?utm_source=claude_plugin&utm_medium=plugin_manifest",
+  "privacyPolicyUrl": "https://esment.notas.ai/privacy",
   "repository": "https://github.com/NotasHQ/esment-plugins",
   "license": "MIT",
-  "keywords": ["memory", "context", "recall", "personal-knowledge"],
+  "keywords": [
+    "memory",
+    "context",
+    "recall",
+    "personal-knowledge"
+  ],
   "mcpServers": {
     "esment": {
       "type": "http",
